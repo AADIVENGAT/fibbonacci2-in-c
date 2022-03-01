@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+
+  int N;
+  int prevTerm = 0, currentTerm = 1;
+  int nextTerm = prevTerm + currentTerm;
+  scanf("%d", &N);
+  printf("%d %llu ", prevTerm, currentTerm);
+  int counter=3; 
+  while (counter <= N) {
+    printf("%d ", nextTerm);
+    prevTerm = currentTerm;
+    currentTerm = nextTerm;
+    nextTerm = prevTerm + currentTerm;
+    ++counter;
+  }
+
+  return 0;
+}
